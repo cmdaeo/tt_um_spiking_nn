@@ -20,9 +20,9 @@ project:
   # WARNING: VHDL support in Tiny Tapeout is experimental. The template may get changes during
   #          the shuttle and VHDL support may be dropped for future shuttles if we see low usage.
   source_files:
-    - "tt_um_spiking_nn.vhd"
-    - "network_control.vhd"
     - "lif_neuron.vhd"
+    - "network_control.vhd"
+    - "tt_um_spiking_nn.vhd"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
