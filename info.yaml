@@ -1,7 +1,7 @@
 # Tiny Tapeout project information
 project:
-  title:        ""      # Project title
-  author:       ""      # Your name
+  title:        "tt_um_spiking_nn"      # Project title
+  author:       "cmdaeo"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  ""      # One line description of what your project does
   language:     "VHDL"  # other examples include Verilog, SystemVerilog, Amaranth, etc
@@ -20,7 +20,9 @@ project:
   # WARNING: VHDL support in Tiny Tapeout is experimental. The template may get changes during
   #          the shuttle and VHDL support may be dropped for future shuttles if we see low usage.
   source_files:
-    - "project.vhdl"
+    - "tt_um_spiking_nn.vhd"
+    - "network_control.vhd"
+    - "lif_neuron.vhd"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
