@@ -2,8 +2,6 @@ name: fpga
 
 on:
   push:
-    # Comment out (or remove) the following line to run the FPGA workflow on every push:
-    branches: none
   workflow_dispatch:
 
 jobs:
@@ -14,6 +12,12 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
+
+      - name: Install GHDL for VHDL transpilation
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ghdl-llvm
 
       - name: FPGA bitstream for TT ASIC Sim (ICE40UP5K)
         uses: TinyTapeout/tt-gds-action/fpga/ice40up5k@tt10
